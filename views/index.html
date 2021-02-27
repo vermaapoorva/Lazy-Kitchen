@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meal Planner</title>
+
+    <!--  <link rel="stylesheet" href="stylesheet.css">
+  -->
+    <style>
+      .lazykitchen {
+        color: rgb(42, 130, 165);
+        font-size: 48px;
+        text-decoration: underline;
+        font-weight: lighter;
+        padding: 70px 0;
+        text-align: center;
+        
+      }
+      .banner {
+        width: 100%;
+        height: 200px;
+        background-color: #add8e6;
+        margin-bottom: 50px;
+        margin: 0%;
+      }
+      .tagline {
+        text-align: center;
+      }
+      .searchbar {
+        color: #545454;
+        background-color: #bebebe;
+        border-radius: 15px 50px;
+        text-align: center;
+        font-size: 30px;
+        width: 100%;
+      }
+
+      .searchbar input {
+       	object-fit: fill;
+	padding-top: 0;
+        background-color: #bebebe;
+        border: none;
+        text-align: right;
+	border-radius: 15px 50px;
+      }
+      
+      .searchbar input:hover,
+      .searchbar input:focus {
+        border: 1.5px solid #009688;
+        background-color: white;
+      }
+        
+      .searchbar:hover,
+      .searchbar:focus {
+        border: 1.5px solid #009688;
+        background-color: white;
+      }
+      body {
+        background-color: #cbe5fd;
+        font-family: "Roboto", sans-serif;
+      }
+      .container{
+        position: relative;
+        padding: 20px 50px;
+      }
+      
+      .wrapper{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .input{
+        width: 400px;
+        border: 3px solid #fff;
+        background: yellow;
+        padding: 15px 30px;
+        font-size: 18px;
+        outline: none;
+      }
+
+      ::-webkit-input-placeholder{
+        color: #fff;
+        text-transform: uppercase;
+        font-family: "Roboto", sans-serif;
+      }
+
+      
+      ::-moz-input-placeholder{
+        color: #fff;
+        text-transform: uppercase;
+        font-family: "Roboto", sans-serif;
+      }
+
+      
+      ::-ms-input-placeholder{
+        color: #fff;
+        text-transform: uppercase;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .close-btn{
+        position: absolute;
+        top:21px;
+        right: 50px;
+        cursor: pointer;
+        width: 120px;
+        height: 55px;
+        background: #fff;
+        color: #fc913a;
+        border: 0;
+        border-radius: 50px;
+        outline: none;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+
+    </style>
+
+    <link
+      href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <!-- Javascript -->
+    
+ </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <!-- <input
+          type="text"
+          class="input"
+          placeholder="what are you looking for?"
+        /> -->
+        <!-- <input type="button" value="Search" class="close-btn" /> -->
+        <div class="banner">
+          <p1 class="lazykitchen" font-family: Trebuchet MS;>LAZY KITCHEN</p1>
+          <p class="tagline">
+            Covid fhas given us enough problems, food doesn't have to be one of
+            them. </p>
+        </div>
+        <div class="searchbar">
+          <input
+            id="automplete-1"
+            padding="100px;"
+            type="text"
+            placeholder="What ingredients are you working with.."
+          />
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        var availableTutorials = ["ActionScript", "Bootstrap", "C", "C++"];
+        $("#automplete-1").autocomplete({
+          source: availableTutorials,
+        });
+      });
+    </script>
+  </body>
+</html>
