@@ -3,10 +3,12 @@ const express = require("express");
 const router = express.Router();
 const request = require("request");
 
+// Home page
 router.get("/", async (req, res) => {
     res.render('index')
 })
 
+// Autocomplete options for search bar
 router.get("/search", async (req, res) => {
   try {
 
@@ -23,9 +25,12 @@ router.get("/search", async (req, res) => {
     }
     
   } catch (err) {
-    console.error(err.message);
+    console.error(err);
     res.status(500).send("Server Error");
   }
 });
+
+// // Find recipes given list of ingredients
+// router
 
 module.exports = router;

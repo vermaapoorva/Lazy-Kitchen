@@ -13,6 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json())
 app.use(express.urlencoded({extended: true})) // parsing incoming requests with urlencoded based body-parser
+app.use("/static", express.static('./static/'));
 
 // use router
 app.use("/", apiRouter);

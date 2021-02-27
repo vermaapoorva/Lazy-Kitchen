@@ -15,9 +15,13 @@
         font-weight: lighter;
         padding: 70px 0;
         text-align: center;
-        
       }
       .banner {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 0;
         width: 100%;
         height: 200px;
         background-color: #add8e6;
@@ -37,20 +41,20 @@
       }
 
       .searchbar input {
-       	object-fit: fill;
-	padding-top: 0;
+        object-fit: fill;
+        padding-top: 0;
         background-color: #bebebe;
         border: none;
         text-align: right;
-	border-radius: 15px 50px;
+        border-radius: 15px 50px;
       }
-      
+
       .searchbar input:hover,
       .searchbar input:focus {
-        border: 1.5px solid #009688;
         background-color: white;
+        border-radius: 15px 50px;
       }
-        
+
       .searchbar:hover,
       .searchbar:focus {
         border: 1.5px solid #009688;
@@ -60,18 +64,18 @@
         background-color: #cbe5fd;
         font-family: "Roboto", sans-serif;
       }
-      .container{
+      .container {
         position: relative;
         padding: 20px 50px;
       }
-      
-      .wrapper{
+
+      .wrapper {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
       }
-      .input{
+      .input {
         width: 400px;
         border: 3px solid #fff;
         background: yellow;
@@ -80,29 +84,27 @@
         outline: none;
       }
 
-      ::-webkit-input-placeholder{
+      ::-webkit-input-placeholder {
         color: #fff;
         text-transform: uppercase;
         font-family: "Roboto", sans-serif;
       }
 
-      
-      ::-moz-input-placeholder{
+      ::-moz-input-placeholder {
         color: #fff;
         text-transform: uppercase;
         font-family: "Roboto", sans-serif;
       }
 
-      
-      ::-ms-input-placeholder{
+      ::-ms-input-placeholder {
         color: #fff;
         text-transform: uppercase;
         font-family: "Roboto", sans-serif;
       }
 
-      .close-btn{
+      .close-btn {
         position: absolute;
-        top:21px;
+        top: 21px;
         right: 50px;
         cursor: pointer;
         width: 120px;
@@ -115,8 +117,6 @@
         text-transform: uppercase;
         font-weight: bold;
       }
-
-
     </style>
 
     <link
@@ -125,10 +125,7 @@
     />
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-
-    <!-- Javascript -->
-    
- </head>
+  </head>
 
   <body>
     <div class="wrapper">
@@ -139,29 +136,32 @@
           placeholder="what are you looking for?"
         /> -->
         <!-- <input type="button" value="Search" class="close-btn" /> -->
+
         <div class="banner">
           <p1 class="lazykitchen" font-family: Trebuchet MS;>LAZY KITCHEN</p1>
           <p class="tagline">
-            Covid fhas given us enough problems, food doesn't have to be one of
-            them. </p>
+            Covid has given us enough problems, food doesn't have to be one of
+            them.
+          </p>
         </div>
+
         <div class="searchbar">
           <input
-            id="automplete-1"
+            id="dropdownMenu"
             padding="100px;"
             type="text"
             placeholder="What ingredients are you working with.."
           />
         </div>
+
+        <!-- Need a search button -->
       </div>
     </div>
-    <script>
-      $(function () {
-        var availableTutorials = ["ActionScript", "Bootstrap", "C", "C++"];
-        $("#automplete-1").autocomplete({
-          source: availableTutorials,
-        });
-      });
-    </script>
+
+    <!-- JavaScript -->
+    <script src="../static/script.js"></script>
+
+    <!-- <script  src="jquery-3.3.1.js"></script> -->
+
   </body>
 </html>
