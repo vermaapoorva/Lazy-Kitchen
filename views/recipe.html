@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meal Planner</title>
 
-    <link rel="stylesheet" href="../static/stylesheet.css" type="text/css" />
+    <link rel="stylesheet" href="../static/recipeStylesheet.css" type="text/css" />
     <link
       href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
       rel="stylesheet"
@@ -28,17 +28,48 @@
           <h1 class="lazykitchen" font-family: Trebuchet MS;>
             LAZY KITCHEN &#127859;
           </h1>
+       
           <p class="tagline">
             Covid has given us enough problems, food doesn't have to be one of
             them &#128517;
           </p>
+          
         </div>
+
+        <div class="recipe" font-family: Trebuchet MS;>
+
+        <div class="left">
+          <h2><%= name %></h2>
+          <div><%= time %> minutes</div>
+          <div><%- summary %></div>
+          <figure class = "image_dish" >
+            <img class = "image" src = <%- image %>></img>
+          </figure>
+        </div>
+
+        <div class="right">
+          <h2>Ingredients</h2>
+          <% var ing = (ingredients);
+            console.log(ing)
+            for (var i = 0; i < ing.length; i++) { %>
+          <div class="instructions"><%= ing[i].name + " - " + ing[i].amount + ing[i].unit %></div>
+          <% } %>
+
+          <h2>Instructions</h2>
+          <% var ins = (instructions[0].steps);
+            console.log(ins)
+            for (var i = 0; i < ins.length; i++) { %>
+          <div class="instructions"><%= ins[i].step %></div>
+          <% } %>
+        </div>
+        
+        </di>
       
     <!-- JavaScript -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="../static/script.js"></script>
+    <script src="../static/recipeScript.js"></script>
   </body>
 </html>

@@ -22,7 +22,9 @@ $(document).ready(function () {
     },
     minLength: 2,
     select: function (event, ui) {
+      $(this).val("");
       addIngredient(ui.item.value);
+      return false;
     },
   });
 });
@@ -41,7 +43,6 @@ function addIngredient(name) {
   ingredients.ingredients.push(name);
   console.log(JSON.stringify(ingredients));
   updateIngredients();
-  updateRecipes();
 }
 
 /*
@@ -56,8 +57,8 @@ function deleteIngredient(ingredient) {
   */
 
   console.log("DELETING " + ingredient);
-  var filtered = ingredients.ingredients.filter(function(value, index, arr){ 
-      return value != ingredient;
+  var filtered = ingredients.ingredients.filter(function (value, index, arr) {
+    return value != ingredient;
   });
   ingredients.ingredients = filtered;
   updateIngredients();
@@ -109,8 +110,8 @@ function updateIngredients(name) {
   updateRecipes();
 }
 
-function goToRecipe(id){
-  window.location = `http://localhost:5000/recipe/${id}`
+function goToRecipe(id) {
+  window.location = `http://localhost:5000/recipe/${id}`;
 }
 
 /*
