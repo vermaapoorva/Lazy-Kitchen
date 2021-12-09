@@ -1,4 +1,4 @@
-# Lazy Kitchen - 1st prize, Warwick Hack '20
+# Lazy Kitchen - 1st prize, Warwick Hack '21
 
 Covid has given us enough problems, food doesn't have to be one of them 😅
 
